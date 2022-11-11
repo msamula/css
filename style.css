@@ -1,0 +1,40 @@
+:root{
+    --width: 200px;
+}
+body{
+    background-color: darkcyan;
+}
+div{
+    display: inline-flex;
+    width: var(--width);
+    height: var(--width);
+    background-color: black;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+div:hover{
+    background-color: rgba(255,0,0,0.8);
+}
+
+@keyframes move {
+    25%{
+        width: calc(var(--width)/2);
+        background: linear-gradient(black, white);
+        opacity: 30%;
+        border-style: solid;
+        border-width: 1px;
+    }
+    50%{
+        width: calc(var(--width)*1.5);
+        background-color: white;
+        transform: rotateY(1turn);
+        translate: calc(var(--width)*2) calc(var(--width)*3);
+        opacity: 5%;
+        border-style: solid;
+        border-width: 10px;
+        border-color: aquamarine;
+    }
+}
+
